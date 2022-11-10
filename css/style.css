@@ -12,7 +12,7 @@
     height: 60vh;
 }
 #imgp1 {
-    width: 200px;
+    width: 300px;
 
 }
 #p1Atk {
@@ -22,6 +22,29 @@
 #winSaitama {
     width: 300px;
 }
+.hpBorder1 {
+    height: 25px;
+    width: 350px !important;
+    border: 1px solid white;
+    z-index: 1;
+    margin-left: 20px !important ;
+    padding: 0px !important;
+}
+.hpFill1 {
+    height: 100%;
+    /* width: 100%; */
+    background-color: green;
+}
+
+
+
+/* #hpBar1 {
+    width: 100px;
+    height: 25px;
+    background-color: green;
+    transition: 2s;
+    z-index: 1;
+} */
 
 
 /* UI CSS */
@@ -36,12 +59,27 @@
 }
 
 #imgp2 {
-    width: 200px;
+    width: 250px;
 }
 #p2Atk {
     background-color: black;
     border-color: none;
+    width: 100px;
+
 }
 #winner {
-    width: 300px;
+    width: 250px;
+}
+.hpBorder2 {
+    height: 25px;
+    width: 350px !important;
+    border: 1px solid white;
+    z-index: 1;
+    margin-left: 20px !important ;
+    padding: 0px !important;
+}
+.hpFill2 {
+    height: 100%;
+    /* width: 100%; */
+    background-color: red;
 }

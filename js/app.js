@@ -5,15 +5,27 @@
 let atkBtn1 = document.querySelector("#p1Atk");
 atkBtn1.addEventListener("click", atkPlayer2);
 let basep2HP = 500;
+let baseWidth2 = "100%";
+
+
 
 function atkPlayer2() {
     let damageP2 = Math.ceil(Math.random()*5);
     console.log(damageP2);
     let atkDisplay = document.querySelector("#atkDisplay");
+
     //p2HP current HP
     let p2HP = document.querySelector("#p2HPDisplay");
-    let newp2HP = document.querySelector("#newp2HPDisplay");
+
+    //display Winner!!
     let winp1 = document.querySelector("#winner");
+
+    //hp bar
+    let hpBorder2 = document.querySelector(".hpBorder2");
+    let hpFill2 = document.querySelector(".hpFill2");
+    // console.log(hpFill);
+
+    
     atkBtn1.style ="display:none;"
     atkBtn2.style = "display:block"
 
@@ -30,6 +42,16 @@ function atkPlayer2() {
         console.log(Math.round(newp2HP));
         p2HP.textContent = (Math.round(newp2HP)); 
         winp1.src= "image/saitama atk 1.gif";
+        
+        hpFill2.style.height = "100%";
+        hpFill2.style.transitionDuration = "2s";
+        let newWidth =(basep2HP/5) + "%";
+        let newHPFill2 = document.querySelector(".hpFill2");
+        newHPFill2.style.width = newWidth;
+        baseWidth2 = newWidth;
+        console.log(baseWidth2);
+        hpFill2 = newHPFill2.innerHTML;       
+        
     }
 
     if (damageP2 == 3) {
@@ -39,6 +61,15 @@ function atkPlayer2() {
         console.log(Math.round(newp2HP));
         p2HP.textContent = (Math.round(newp2HP));
         winp1.src= "image/saitama atk 4.gif";
+
+        hpFill2.style.height = "100%";
+        hpFill2.style.transitionDuration = "2s";
+        let newWidth =(basep2HP/5) + "%";
+        let newHPFill2 = document.querySelector(".hpFill2");
+        newHPFill2.style.width = newWidth;
+        baseWidth2 = newWidth;
+        console.log(baseWidth2);
+        hpFill2 = newHPFill2.innerHTML;  
     }
 
     if (damageP2 == 4 ) {
@@ -48,6 +79,16 @@ function atkPlayer2() {
         console.log(Math.round(newp2HP));
         p2HP.textContent = (Math.round(newp2HP));
         winp1.src= "image/saitama serious punch.gif";
+
+        hpFill2.style.height = "100%";
+        hpFill2.style.transitionDuration = "2s";
+        let newWidth =(basep2HP/5) + "%";
+        let newHPFill2 = document.querySelector(".hpFill2");
+        newHPFill2.style.width = newWidth;
+        baseWidth2 = newWidth;
+        console.log(baseWidth2);
+        hpFill2 = newHPFill2.innerHTML;  
+    
     }
     
     if (damageP2 == 5 ) {
@@ -57,15 +98,30 @@ function atkPlayer2() {
         console.log(Math.round(newp2HP));
         p2HP.textContent = (Math.round(newp2HP));
         winp1.src="image/saitama ulti groin punch.gif";
+
+        hpFill2.style.height = "100%";
+        hpFill2.style.transitionDuration = "2s";
+        let newWidth =(basep2HP/5) + "%";
+        let newHPFill2 = document.querySelector(".hpFill2");
+        newHPFill2.style.width = newWidth;
+        baseWidth2 = newWidth;
+        console.log(baseWidth2);
+        hpFill2 = newHPFill2.innerHTML;  
+
     }
     
     if ( basep2HP <= 0) {
+
         console.log("YOU WIN");
         // atkBtn1.style ="display:none;"
         atkBtn2.style ="display:none;"
         atkDisplay.textContent = "SAITAMA WIN";
-        p2HP.textContent = "DEAD!!!"
+        p2HP.textContent = "LOST"
         winp1.src="image/saitamaimage.png" 
+
+        hpBorder2.remove(hpFill2);
+
+
         
         // atkBtn2.setAttribute("disabled","");
     }
@@ -79,6 +135,7 @@ function atkPlayer2() {
 let atkBtn2 = document.querySelector("#p2Atk");
 atkBtn2.addEventListener("click", atkPlayer1);
 let basep1HP = 500;
+let baseWidth1 = "100%";
 
 function atkPlayer1() {
     let damageP1 = Math.ceil(Math.random()*5);
@@ -88,6 +145,12 @@ function atkPlayer1() {
     let p1HP = document.querySelector("#p1HPDisplay");
     let newp1HP = document.querySelector("#newp1HPDisplay");
     let winp2 = document.querySelector("#winner");
+
+    //hp bar
+    let hpBorder1 = document.querySelector(".hpBorder1");
+    let hpFill1 = document.querySelector(".hpFill1");
+    // console.log(hpFill);
+
     atkBtn2.style ="display:none;"
     atkBtn1.style = "display:block"
 
@@ -103,6 +166,15 @@ function atkPlayer1() {
         console.log(Math.round(newp1HP));
         p1HP.textContent = (Math.round(newp1HP));
         winp2.src="image/all might atk 3.gif";  
+
+        hpFill1.style.height = "100%";
+        hpFill1.style.transitionDuration = "2s";
+        let newWidth =(basep1HP/5) + "%";
+        let newHPFill1 = document.querySelector(".hpFill1");
+        newHPFill1.style.width = newWidth;
+        baseWidth1 = newWidth;
+        console.log(baseWidth1);
+        hpFill1 = newHPFill1.innerHTML;    
     }
 
     if (damageP1 == 3) {
@@ -112,6 +184,15 @@ function atkPlayer1() {
         console.log(Math.round(newp1HP));
         p1HP.textContent = (Math.round(newp1HP));
         winp2.src="image/all might atk2.gif" ;
+
+        hpFill1.style.height = "100%";
+        hpFill1.style.transitionDuration = "2s";
+        let newWidth =(basep1HP/5) + "%";
+        let newHPFill1 = document.querySelector(".hpFill1");
+        newHPFill1.style.width = newWidth;
+        baseWidth1 = newWidth;
+        console.log(baseWidth1);
+        hpFill1 = newHPFill1.innerHTML;  
     }
 
     if (damageP1 == 4 ) {
@@ -121,6 +202,15 @@ function atkPlayer1() {
         console.log(Math.round(newp1HP));
         p1HP.textContent = (Math.round(newp1HP));
         winp2.src="image/all might atk 4.gif";
+
+        hpFill1.style.height = "100%";
+        hpFill1.style.transitionDuration = "2s";
+        let newWidth =(basep1HP/5) + "%";
+        let newHPFill1 = document.querySelector(".hpFill1");
+        newHPFill1.style.width = newWidth;
+        baseWidth1 = newWidth;
+        console.log(baseWidth2);
+        hpFill1 = newHPFill1.innerHTML;  
     }
     
     if (damageP1 == 5 ) {
@@ -130,6 +220,15 @@ function atkPlayer1() {
         console.log(Math.round(newp1HP));
         p1HP.textContent = (Math.round(newp1HP));
         winp2.src="image/all might ulti.gif";
+
+        hpFill1.style.height = "100%";
+        hpFill1.style.transitionDuration = "2s";
+        let newWidth =(basep1HP/5) + "%";
+        let newHPFill1 = document.querySelector(".hpFill1");
+        newHPFill1.style.width = newWidth;
+        baseWidth1 = newWidth;
+        console.log(baseWidth2);
+        hpFill1 = newHPFill1.innerHTML;  
     }
     
     if ( basep1HP <= 0) {
@@ -137,8 +236,10 @@ function atkPlayer1() {
         atkBtn1.style ="display:none;"
         // atkBtn2.style ="display:none;"
         atkDisplay.textContent = "ALL MIGHT WIN";
-        p1HP.textContent = "DEAD!!!"
+        p1HP.textContent = "LOST!!"
         winp2.src="image/ALLMIGHTIMAGE.png" 
+
+        hpBorder1.remove(hpFill1);
         // atkBtn1.setAttribute("disabled","");
     }
     // atkBtn2.setAttribute("disabled", "");
