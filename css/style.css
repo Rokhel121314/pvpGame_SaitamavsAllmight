@@ -1,0 +1,47 @@
+.container-fluid {
+    height: 100vh;
+}
+
+
+/* PLAYER 1 CSS */
+.player1 {
+    height: 60vh;
+}
+
+.imgHeight {
+    height: 60vh;
+}
+#imgp1 {
+    width: 200px;
+
+}
+#p1Atk {
+    background-color: black;
+    border-color: none;
+}
+#winSaitama {
+    width: 300px;
+}
+
+
+/* UI CSS */
+.vsImage {
+   height: 100px;
+   width: 100px;
+}
+
+/* PLAYER 2 CSS */
+.player2 {
+    height: 60vh;
+}
+
+#imgp2 {
+    width: 200px;
+}
+#p2Atk {
+    background-color: black;
+    border-color: none;
+}
+#winner {
+    width: 300px;
+}
