@@ -13,66 +13,77 @@
     <div class="container-fluid bg-black">
         <div class="row">
             <div class="col text-center text-warning mt-4">
-                <h1>ONE PUNCH MAN VS BOKU NO HERO</h1>
+                <img src="image/header logo.png" alt="">
             </div>
         </div>
         <div class="row">
 
 <!-- -------------------PLAYER 1 --------------------------->
-            <div class="col-4">
-                <div class="row text-success text-end d-flex row flex-wrap ms-4" id="hitPoints1">
-                    <h4>HITPOINTS</h4>
-                    <h2 class="d-none" id="p1HPDisplay">500</h2>
-                    <div class="hpBorder1 ">
-                        <div class="hpFill1">
-                            
+            <div class="col-5 col-md-4">
+                <div class="row text-success text-end d-flex row flex-wrap " id="hitPoints1">
+                    <div class="col-12">
+                        <h4>HITPOINTS</h4>
+                    </div>
+                    <div class="col-12 d-flex justify-content-end">
+                        <h2 class="d-none" id="p1HPDisplay">500</h2>
+                        <div class="hpBorder1 ">
+                            <div class="hpFill1">
+                                
+                            </div>
                         </div>
                     </div>
-
                     <!-- <div id="hpBar1"></div> -->
                 </div>
 
                 
                 <div class="row player1">
-                    <div class="col-9 d-flex flex-column justify-content-evenly align-items-center">
+                    <div class="col-6 col-md-9 d-flex flex-column justify-content-evenly align-items-center">
                         <div class="row imgHeight">
                             <img id="imgp1" src="image/saitamaimage.png" alt="">
                         </div>
-                        <div class="row text-success">
+                        <div class="row text-success d-md-block d-none">
                             <h2>SAITAMA</h2>
                         </div> 
                     </div>
-                    <div class="col-3 d-flex align-items-center justify-content-end">
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-end">
                         <form action="#" method="">
                             <button id="p1Atk">
                                 <img src="image//saitama attack.png" alt="">
-                                <h3 class="text-light">ATTACK!!</h3>
+                                <h3 class="text-light d-md-block d-none">ATTACK!!</h3>
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
 <!-- -------------------ACTION INTERFACE --------------------------->
-            <div class="col-4 d-flex flex-column align-items-center justify-content-evenly">
+            <div class="col-2 col-md-4 d-flex flex-column align-items-center justify-content-evenly">
                 <div class="row text-center">
                     <div class="col">
-                        <img class="vsImage" src="image/Versus-Transparent.png" alt="">
+                        <!-- <img class="vsImage" src="image/Versus-Transparent.png" alt=""> -->
                     </div>
                     
                 </div>
-                <div id="winnerAnnounce" class="text-center text-warning">
-                    <h3 id="atkDisplay"></h3>
-                    <img id="winner" src="image/fight logo.png" alt="">
+                <div id="winnerAnnounce" class="text-center text-warning mt-3">
+                    <div>
+                        <h3 id="atkDisplay"></h3>
+                    </div>
+                    <div class="d-none d-md-block">
+                        <img id="winner" src="image/fight logo.png" alt="">
+                    </div>
                 </div>
             </div>
 <!-- -------------------PLAYER 2 --------------------------->            
-            <div class="col-4">
+            <div class="col-5 col-md-4">
                 <div class="row text-danger" id="hitPoints2">
-                    <h4>HITPOINTS</h4>
-                    <h2 class="d-none" id="p2HPDisplay">500</h2>
-                    <div class="hpBorder2">
-                        <div class="hpFill2">
-                            
+                    <div class="col-12">
+                        <h4>HITPOINTS</h4>
+                    </div>
+                    <div class="col-12 d-flex justify-content-start">
+                        <h2 class="d-none" id="p2HPDisplay">500</h2>
+                        <div class="hpBorder2">
+                            <div class="hpFill2">
+                                
+                            </div>
                         </div>
                     </div>
                     <!-- <h4 id="newp2HPDisplay"></h4> -->
@@ -80,19 +91,19 @@
                 
                 <div class="row player2">
 
-                    <div class="col-3 d-flex align-items-center justify-content-start">
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-start">
                         <form action="#" method="">
                             <button id="p2Atk">
                                 <img src="image/all might attack.png" alt="">
-                                <h3 class="text-light">ATTACK!!</h3>
+                                <h3 class="text-light d-md-block d-none">ATTACK!!</h3>
                             </button>
                         </form>
                     </div>
-                    <div class="col-9 d-flex flex-column justify-content-evenly align-items-center">
+                    <div class="col-6 col-md-9 d-flex flex-column justify-content-evenly align-items-center">
                         <div class="row imgHeight">
                             <img id="imgp2" src="image/ALLMIGHTIMAGE.png" alt="">
                         </div>
-                        <div class="row text-danger">
+                        <div class="row text-danger d-md-block d-none">
                             <h2>ALL MIGHT</h2>
                         </div> 
                     </div>

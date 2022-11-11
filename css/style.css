@@ -24,7 +24,7 @@
 }
 .hpBorder1 {
     height: 25px;
-    width: 350px !important;
+    width: 300px !important;
     border: 1px solid white;
     z-index: 1;
     margin-left: 20px !important ;
@@ -64,7 +64,6 @@
 #p2Atk {
     background-color: black;
     border-color: none;
-    width: 100px;
 
 }
 #winner {
@@ -72,10 +71,9 @@
 }
 .hpBorder2 {
     height: 25px;
-    width: 350px !important;
+    width: 300px !important;
     border: 1px solid white;
     z-index: 1;
-    margin-left: 20px !important ;
     padding: 0px !important;
 }
 .hpFill2 {

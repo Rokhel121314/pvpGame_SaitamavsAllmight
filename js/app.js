@@ -117,7 +117,7 @@ function atkPlayer2() {
         atkBtn2.style ="display:none;"
         atkDisplay.textContent = "SAITAMA WIN";
         p2HP.textContent = "LOST"
-        winp1.src="image/saitamaimage.png" 
+        winp1.src="image/saitamagif.gif" 
 
         hpBorder2.remove(hpFill2);
 
@@ -232,12 +232,14 @@ function atkPlayer1() {
     }
     
     if ( basep1HP <= 0) {
+
         console.log("YOU WIN");  
         atkBtn1.style ="display:none;"
         // atkBtn2.style ="display:none;"
         atkDisplay.textContent = "ALL MIGHT WIN";
         p1HP.textContent = "LOST!!"
-        winp2.src="image/ALLMIGHTIMAGE.png" 
+        winp2.src="image/allmightgif1.gif" 
+        
 
         hpBorder1.remove(hpFill1);
         // atkBtn1.setAttribute("disabled","");
