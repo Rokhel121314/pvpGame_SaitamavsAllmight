@@ -1,4 +1,7 @@
+let instruction = "HOW TO PLAY OPM vs MHA!!                                                                   "
+let instruction2 = "At first any Player can attack first, Press the attack button in order to attack.After the 1st player attack, attacking will take turns until hit points of opposing player reach 0 HP. Player with more HP left wins. GOOD LUCK HAVE FUN!!!"
 
+window.alert(instruction + instruction2);
 
 //PLAYER SAITAMA
 
@@ -24,6 +27,9 @@ function atkPlayer2() {
     let hpBorder2 = document.querySelector(".hpBorder2");
     let hpFill2 = document.querySelector(".hpFill2");
     // console.log(hpFill);
+
+    //sfx
+    let ultiSFX = document.querySelector("#sfx");
 
     
     atkBtn1.style ="display:none;"
@@ -73,12 +79,13 @@ function atkPlayer2() {
     }
 
     if (damageP2 == 4 ) {
-        atkDisplay.textContent = "KILLER MOVE: SERIOUS PUNCH!! -50"
+        atkDisplay.textContent = "KILLER MOVE: NORMAL PUNCH!! -50"
         newp2HP = basep2HP - 50;
         basep2HP = newp2HP;
         console.log(Math.round(newp2HP));
         p2HP.textContent = (Math.round(newp2HP));
         winp1.src= "image/saitama serious punch.gif";
+
 
         hpFill2.style.height = "100%";
         hpFill2.style.transitionDuration = "2s";
@@ -92,12 +99,12 @@ function atkPlayer2() {
     }
     
     if (damageP2 == 5 ) {
-        atkDisplay.textContent =  "KILLER MOVE:SERIOUS SERIES - GROIN PUNCH!! -100"
+        atkDisplay.textContent =  "KILLER MOVE:SERIOUS SERIES - SERIOUS PUNCH!! -100"
         newp2HP = basep2HP - 100;
         basep2HP = newp2HP;
         console.log(Math.round(newp2HP));
         p2HP.textContent = (Math.round(newp2HP));
-        winp1.src="image/saitama ulti groin punch.gif";
+        winp1.src="image/saitama-one-punch-man-serious-punch-boros-serious-punch.gif";
 
         hpFill2.style.height = "100%";
         hpFill2.style.transitionDuration = "2s";
@@ -108,16 +115,22 @@ function atkPlayer2() {
         console.log(baseWidth2);
         hpFill2 = newHPFill2.innerHTML;  
 
+        ultiSFX.src = "audio/serious-punch-By-Tuna.mp3";
+        ultiSFX.play();
+
     }
     
     if ( basep2HP <= 0) {
 
         console.log("YOU WIN");
         // atkBtn1.style ="display:none;"
-        atkBtn2.style ="display:none;"
+        atkBtn2.style ="display:none;";
         atkDisplay.textContent = "SAITAMA WIN";
-        p2HP.textContent = "LOST"
-        winp1.src="image/saitamagif.gif" 
+        p2HP.textContent = "LOST";
+        winp1.src="image/saitamagif.gif" ;
+
+        ultiSFX.src = "audio/one punch man guitar.mp3";
+        ultiSFX.play();
 
         hpBorder2.remove(hpFill2);
 
@@ -150,6 +163,10 @@ function atkPlayer1() {
     let hpBorder1 = document.querySelector(".hpBorder1");
     let hpFill1 = document.querySelector(".hpFill1");
     // console.log(hpFill);
+
+    //sfx
+    let ultiSFX = document.querySelector("#sfx");
+
 
     atkBtn2.style ="display:none;"
     atkBtn1.style = "display:block"
@@ -221,6 +238,10 @@ function atkPlayer1() {
         p1HP.textContent = (Math.round(newp1HP));
         winp2.src="image/all might ulti.gif";
 
+        ultiSFX.src = "audio/united-states-of-smash-my-hero-academia-mp3cut.mp3";
+        ultiSFX.play();
+
+
         hpFill1.style.height = "100%";
         hpFill1.style.transitionDuration = "2s";
         let newWidth =(basep1HP/5) + "%";
@@ -239,6 +260,9 @@ function atkPlayer1() {
         atkDisplay.textContent = "ALL MIGHT WIN";
         p1HP.textContent = "LOST!!"
         winp2.src="image/allmightgif1.gif" 
+
+                ultiSFX.src = "audio/My Hero Academia.mp3";
+        ultiSFX.play();
         
 
         hpBorder1.remove(hpFill1);
